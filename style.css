@@ -1,0 +1,95 @@
+* {
+      box-sizing: border-box;
+}
+
+body {
+      margin: 0;
+}
+
+.card {
+      position: relative;
+      width: 60%;
+      height: 25rem;
+      border-radius: 15px;
+      border: 5px solid rgb(0, 47, 255);
+      margin: 50px auto;
+}
+
+.card::before {
+      content: "Welcome Sir";
+      font-size: 3rem;
+      position: absolute;
+      color: rgb(0, 47, 255);
+      top: 40%;
+      left: 30%;
+      /* transform: translate(-50%, -50%); */
+      animation: start 0.8s 5, content 2.4s 4s 1 linear, end 0.8s infinite 6.6s;
+}
+
+
+@keyframes content {
+      0% {
+            content: "W";
+      }
+
+      10% {
+            content: "We";
+      }
+
+      20% {
+            content: "Wel";
+      }
+
+      30% {
+            content: "Welc";
+      }
+
+      40% {
+            content: "Welco";
+      }
+
+      50% {
+            content: "Welcom";
+      }
+
+      60% {
+            content: "Welcome";
+      }
+
+      70% {
+            content: "Welcome ";
+      }
+
+      80% {
+            content: "Welcome S";
+      }
+
+      90% {
+            content: "Welcome Si";
+      }
+
+      100% {
+            content: "Welcome Sir";
+      }
+}
+
+
+@keyframes start {
+      from {
+            content: "|";
+      }
+
+      to {
+            content: "";
+      }
+}
+
+@keyframes end {
+      from {
+            content: "Welcome Sir";
+      }
+
+      to {
+            content: "Welcome Sir|";
+      }
+}
